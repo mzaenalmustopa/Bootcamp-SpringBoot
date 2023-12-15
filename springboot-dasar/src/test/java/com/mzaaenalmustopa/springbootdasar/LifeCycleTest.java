@@ -1,6 +1,7 @@
 package com.mzaaenalmustopa.springbootdasar;
 
 import com.mzaaenalmustopa.springbootdasar.data.Connection;
+import com.mzaaenalmustopa.springbootdasar.data.Server;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,5 +26,10 @@ public class LifeCycleTest {
     @Test
     void testConnection() {
         Connection connection = applicationContext.getBean(Connection.class);
+    }
+
+    @Test
+    void testServer() {
+        Server server = applicationContext.getBean(Server.class);
     }
 }
