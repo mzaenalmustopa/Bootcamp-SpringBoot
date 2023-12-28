@@ -1,0 +1,27 @@
+POST http://localhost:8181/api/person
+Content-Type: application/json
+Accept: application/json
+
+{
+  "middleName": "Zaenal",
+  "lastName": "Mustopa",
+  "email": "zaenal@gmail.com",
+  "phone": "0810002000220",
+  "hobbies": ["Coding","Gaming"],
+  "socialMedia": [
+    {
+      "name": "Facebook",
+      "location": "facebook.com/zaenalebelmetal"
+    }
+  ]
+}
+
+###
+
+POST http://localhost:8181/todo?todo=Topa
+Accept: application/json
+
+###
+
+GET http://localhost:8181/todo
+Accept: application/json
