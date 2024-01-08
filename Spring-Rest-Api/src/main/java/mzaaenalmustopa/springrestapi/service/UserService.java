@@ -1,9 +1,5 @@
 package mzaaenalmustopa.springrestapi.service;
 
-import jakarta.transaction.Transactional;
-import jakarta.validation.ConstraintViolation;
-import jakarta.validation.ConstraintViolationException;
-import jakarta.validation.Validator;
 import lombok.extern.slf4j.Slf4j;
 import mzaaenalmustopa.springrestapi.entity.User;
 import mzaaenalmustopa.springrestapi.model.RegisterUserRequest;
@@ -14,6 +10,7 @@ import mzaaenalmustopa.springrestapi.security.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Objects;

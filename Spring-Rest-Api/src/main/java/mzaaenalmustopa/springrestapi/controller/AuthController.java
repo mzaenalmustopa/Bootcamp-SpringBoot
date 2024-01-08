@@ -1,11 +1,13 @@
 package mzaaenalmustopa.springrestapi.controller;
 
+import mzaaenalmustopa.springrestapi.entity.User;
 import mzaaenalmustopa.springrestapi.model.LoginUserRequest;
 import mzaaenalmustopa.springrestapi.model.TokenResponse;
 import mzaaenalmustopa.springrestapi.model.WebResponse;
 import mzaaenalmustopa.springrestapi.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,5 +26,14 @@ public class AuthController {
     public WebResponse<TokenResponse> login(@RequestBody LoginUserRequest request){
         TokenResponse tokenResponse = authService.login(request);
         return WebResponse.<TokenResponse>builder().data(tokenResponse).build();
+    }
+
+    @DeleteMapping(
+            path = "/api/auth/logout",
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public WebResponse<String> logout(User user){
+        authService.logout(user);
+        return WebResponse.<String>builder().data("OK").build();
     }
 }
