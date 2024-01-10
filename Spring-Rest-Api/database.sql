@@ -52,3 +52,10 @@ CREATE TABLE addresses
 SELECT * FROM addresses;
 
 DESC addresses;
+
+DELETE FROM addresses;
+
+DELETE FROM contacts;
+
+DELETE FROM users;
+

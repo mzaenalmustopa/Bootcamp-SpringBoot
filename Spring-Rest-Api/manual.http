@@ -1,0 +1,125 @@
+### Register
+
+POST http://localhost:8080/api/users
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "zaenal",
+  "password": "rahasia",
+  "name": "zaenal mustopa"
+}
+
+### Login
+
+POST http://localhost:8080/api/auth/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "zaenal",
+  "password": "rahasia"
+}
+
+### Get User
+
+GET http://localhost:8080/api/users/current
+Accept: application/json
+X-API-TOKEN: 64719cba-28eb-4b64-a57f-e5f4e0a8dbe3
+
+
+### Update User
+PATCH http://localhost:8080/api/users/current
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 64719cba-28eb-4b64-a57f-e5f4e0a8dbe3
+
+{
+  "name": "Muhamad Zaenal Mustopa"
+}
+
+### Create Contact
+POST http://localhost:8080/api/contacts
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 64719cba-28eb-4b64-a57f-e5f4e0a8dbe3
+
+{
+  "firstName": "Topa",
+  "lastName": "Setiawan",
+  "email": "angga@gmail.com",
+  "phone": "09090909"
+}
+
+### Search Contact
+GET http://localhost:8080/api/contacts
+Accept: application/json
+X-API-TOKEN: 64719cba-28eb-4b64-a57f-e5f4e0a8dbe3
+
+
+
+### Get Contact
+GET http://localhost:8080/api/contacts/b765ab4a-6628-44a3-95cb-721c2ea82e2a
+Accept: application/json
+X-API-TOKEN: 64719cba-28eb-4b64-a57f-e5f4e0a8dbe3
+
+### Update Contact
+PUT http://localhost:8080/api/contacts/b765ab4a-6628-44a3-95cb-721c2ea82e2a
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 64719cba-28eb-4b64-a57f-e5f4e0a8dbe3
+
+{
+  "firstName": "Bambang",
+  "lastName": "Pamungkas",
+  "email": "bambang@gmail.com",
+  "phone": "10101010"
+}
+
+
+### Remove Contact
+DELETE http://localhost:8080/api/contacts/bf24a5bf-5c72-4dd5-92af-c2109a8c35cf
+Accept: application/json
+X-API-TOKEN: 64719cba-28eb-4b64-a57f-e5f4e0a8dbe3
+
+
+### Add Address
+POST http://localhost:8080/api/contacts/e31cfd8b-b736-4266-8b94-ee6356cdc002/addresses
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 64719cba-28eb-4b64-a57f-e5f4e0a8dbe3
+
+{
+  "street": "Jalan",
+  "city": "Ciamis",
+  "province" : "Jawa Barat",
+  "country": "Indonesia",
+  "postalCode": "463892"
+}
+
+
+### List Address
+POST http://localhost:8080/api/contacts/e31cfd8b-b736-4266-8b94-ee6356cdc002/addresses
+Accept: application/json
+X-API-TOKEN: 64719cba-28eb-4b64-a57f-e5f4e0a8dbe3
+
+### Update Address
+PUT http://localhost:8080/api/contacts/e31cfd8b-b736-4266-8b94-ee6356cdc002/addresses/e31cfd8b-b736-4266-8b94-ee6356cdc002
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 64719cba-28eb-4b64-a57f-e5f4e0a8dbe3
+
+{
+  "street": "Jalan",
+  "city": "Ciamis",
+  "province" : "Jawa Barat",
+  "country": "Indonesia",
+  "postalCode": "463892"
+}
+
+### Delete Address
+PUT http://localhost:8080/api/contacts/e31cfd8b-b736-4266-8b94-ee6356cdc002/addresses/e31cfd8b-b736-4266-8b94-ee6356cdc002
+Accept: application/json
+X-API-TOKEN: 64719cba-28eb-4b64-a57f-e5f4e0a8dbe3
+
+
